@@ -1,9 +1,13 @@
 import './App.css';
 import { useEffect } from 'react';
+//redux
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './state';
+//contentful api
 import { client } from './client';
+//components
+import Header from './components/Header';
 
 function App() {
   const products = useSelector((state) => state.products.prods);
@@ -29,6 +33,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Header />
       <h1>app</h1>
       <button onClick={() => addItem('hola')}>add item</button>
       <button onClick={() => removeItem('hola')}>remove item</button>

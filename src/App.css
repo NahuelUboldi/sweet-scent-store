@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Prata&display=swap');
+
+:root {
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary: 'Prata', serif;
+  --color-lila: #e8b0e2;
+  --color-green: #c5e7d6;
+  --color-dark-gray: #505050;
+  --color-light-gray: #d2d2d2;
+  --color-white: #fff;
+  --color-black: #000;
+}
+body {
+  font-family: var(--font-primary);
+}
+
+/* ---HEADER--- */
+header nav .container .logo {
+  font-family: var(--font-secondary);
+  color: red;
+}
