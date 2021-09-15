@@ -12,7 +12,7 @@ function Navbar() {
             <li className='menu-item'>about</li>
             <li className='menu-item'>products</li>
           </ul>
-          <IoMdCart />
+          <i class='bi bi-cart-fill'></i>
         </div>
       </div>
     </nav>
