@@ -1,14 +1,29 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './state';
+import { client } from './client';
 
 function App() {
   const state = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(state);
   const { addItem, removeItem, removeAll, showCart, hideCart } =
     bindActionCreators(actionCreators, dispatch);
+
+  const [products, setProducts] = useState([]);
+  const getProds = async () => {
+    const response = await client.getEntries({
+      content_type: 'scentEcommerceProducts',
+    });
+    setProducts(response);
+  };
+
+  useEffect(() => {
+    getProds();
+  }, []);
+
+  console.log(products);
   return (
     <div className='App'>
       <h1>app</h1>
