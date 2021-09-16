@@ -8,6 +8,7 @@ import { actionCreators } from './state';
 import { client } from './client';
 //components
 import Header from './components/Header';
+import Trending from './components/Trending';
 
 function App() {
   const products = useSelector((state) => state.products.prods);
@@ -33,7 +34,11 @@ function App() {
 
   return (
     <div className='App'>
+      <div className='bg-stripe'></div>
       <Header />
+      <main>
+        <Trending />
+      </main>
       <h1>app</h1>
       <button onClick={() => addItem('hola')}>add item</button>
       <button onClick={() => removeItem('hola')}>remove item</button>
