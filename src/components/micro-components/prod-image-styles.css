@@ -1,0 +1,45 @@
+.prod-img-container {
+  position: relative;
+}
+.blob-img,
+.blob-green,
+.blob-lila {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 500px;
+  margin-left: 3rem;
+  border-radius: 50%;
+}
+
+.blob-green {
+  background-color: var(--color-green);
+  background-color: var(--color-dark-gray); /*delete this*/
+  transform: rotate(20deg) translate(15px, 10px);
+  z-index: 0;
+}
+.blob-lila {
+  background-color: var(--color-lila);
+  transform: rotate(20deg) translate(-15px, -10px);
+  z-index: 1;
+}
+.blob-img {
+  position: relative;
+  overflow: hidden;
+  transform: rotate(20deg);
+  isolation: isolate;
+  z-index: 2;
+}
+.blob-img::before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  z-index: -1;
+  background: url('../../img/pexels-philip-warp-6729574.jpg') 0 0 repeat;
+  background-size: cover;
+  transform: rotate(-20deg);
+}

@@ -27,6 +27,7 @@
   --fs-lg: 1.5rem;
   --fs-md: 1.3rem;
   --fs-base: 1rem;
+  --fs-sm: 0.9rem;
 
   --line-height-sm: 1.25;
   --line-height-md: 1.5;
@@ -42,6 +43,7 @@
     --fs-lg: 1.6rem;
     --fs-md: 1.4rem;
     --fs-base: 1.1rem;
+    --fs-sm: 1rem;
   }
 }
 /*medium*/
@@ -50,6 +52,7 @@
     --fs-lg: 1.7rem;
     --fs-md: 1.5rem;
     --fs-base: 1.2rem;
+    --fs-sm: 1.1rem;
   }
 }
 /*large*/
@@ -58,12 +61,15 @@
     --fs-lg: 1.8rem;
     --fs-md: 1.6rem;
     --fs-base: 1.3rem;
+    --fs-sm: 1.1rem;
   }
 }
 
 /*GLOBAL STYLES*/
 body {
   font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  line-height: var(--line-height-sm);
 }
 .container {
   display: flex;
@@ -73,12 +79,17 @@ body {
 }
 /*COMPONENT STYLES*/
 /*--UTILITIES--*/
-.btn {
+.btn,
+.btn-sm {
   border: none;
   font-size: var(--fs-base);
   font-weight: bold;
   padding: 0.7rem 1rem;
   border-radius: 0.2rem;
+}
+.btn-sm {
+  font-size: var(--fs-sm);
+  padding: 0.3rem 0.6rem;
 }
 .btn-primary {
   background-color: var(--color-lila);
@@ -290,12 +301,13 @@ header .hero .container .col.hero-text div .btn-primary:hover {
 section.trending {
   background-color: var(--color-green);
   position: relative;
+  isolation: isolate;
 }
 section.trending .bg-stripe {
   background-color: var(--color-lila);
   position: absolute;
   top: 0px;
-  z-index: 0;
+  z-index: -2;
 }
 
 .trending .container {
@@ -310,4 +322,5 @@ section.trending .bg-stripe {
   position: absolute;
   top: -2px;
   left: 1rem;
+  z-index: -1;
 }

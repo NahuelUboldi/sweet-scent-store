@@ -1,0 +1,17 @@
+.sr-container {
+  display: inline-block;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-lila) 0% 33%,
+    var(--color-white) 33% 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.sr-container i {
+  margin: 0 1px;
+}
