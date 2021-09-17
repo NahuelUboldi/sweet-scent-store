@@ -8,7 +8,7 @@ function TrendingSliderSlide() {
         <div className='col'>
           <div className='ts-text'>
             <header>
-              <h2>
+              <h2 className="h1">
                 LoveMe // <span className='brand'>Tous</span>
               </h2>
               <div className='subtitle'>Eau de Parfum 30ml</div>
@@ -26,8 +26,11 @@ function TrendingSliderSlide() {
               <div className='tag'>primavera</div>
             </div>
             <footer>
+              <div>
               <div className='price'>$60.00</div>
               <button className='btn-sm btn-primary'>Add to cart</button>
+
+              </div>
             </footer>
           </div>
         </div>
