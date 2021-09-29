@@ -103,7 +103,9 @@ h5 {
   font-family: var(--font-secondary);
   font-weight: normal;
 }
-.h1 {font-size: var(--fs-lg);}
+.h1 {
+  font-size: var(--fs-lg);
+}
 .display-1 {
   font-size: var(--fs-xl);
 }
@@ -112,6 +114,10 @@ h5 {
 }
 .display-3 {
   font-size: var(--fs-xl);
+}
+p {
+  font-size: var(--fs-base);
+  line-height: var(--line-height-sm);
 }
 .bg-stripe {
   content: '';
@@ -312,8 +318,12 @@ section.trending .bg-stripe {
 }
 
 .trending .container {
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
   position: relative;
+  display: flex;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
 }
 .trending .container h2.display-2 {
   color: var(--color-white);
