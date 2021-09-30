@@ -30,10 +30,6 @@ function TrendingSliderSlide() {
                 <div className='price'>$60.00</div>
                 <button className='btn-sm btn-primary'>Add to cart</button>
               </div>
-              <div className='arrows'>
-                <i class='bi bi-chevron-compact-left'></i>
-                <i class='bi bi-chevron-compact-right'></i>
-              </div>
             </footer>
           </div>
         </div>

@@ -4,6 +4,8 @@
 .ts-content {
   padding: 2rem 1rem;
   display: flex;
+  margin: 0 auto;
+  width: 100%;
   flex-direction: column;
 }
 .ts-content .col {
@@ -25,6 +27,7 @@
   .ts-content {
     flex-direction: row;
     align-items: center;
+    width: 80%;
   }
   .ts-content .col {
     justify-content: start;
@@ -45,26 +48,25 @@
 
 .ts-container .ts-arrows {
   width: 100%;
-  outline: solid 1px red;
   font-size: var(--fs-xxl);
   color: var(--color-white);
   display: flex;
   justify-content: space-between;
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 0;
+  transform: translate(0%, -50%);
 }
 .ts-container .ts-arrows i {
   line-height: 0;
   padding: 0px;
   margin: 0px;
-  outline: solid 1px orangered;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
 }
-.ts-container .ts-arrows i::before {
-  background-color: blue;
-  margin: 0px;
-  line-height: 1;
-  padding: 0px;
+.ts-container .ts-arrows i:hover {
+  opacity: 1;
 }
 
 /*image*/
@@ -140,7 +142,6 @@
   font-family: var(--font-secondary);
   line-height: auto;
   padding: 0px;
-  outline: solid 1px red;
 }
 @media (min-width: 768px) {
   .ts-content .col .ts-text header {
