@@ -9,6 +9,7 @@ import { client } from './client';
 //components
 import Header from './components/Header';
 import Trending from './components/Trending';
+import Products from './components/Products';
 
 function App() {
   const products = useSelector((state) => state.products.prods);
@@ -38,6 +39,7 @@ function App() {
       <Header />
       <main>
         <Trending />
+        <Products />
       </main>
       <h1>app</h1>
       <button onClick={() => addItem('hola')}>add item</button>
