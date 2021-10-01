@@ -336,3 +336,8 @@ section.trending .bg-stripe {
   left: 1rem;
   z-index: -1;
 }
+
+/*-----TRENDING-----*/
+section.products .container h2 {
+  color: var(--color-light-gray);
+}
